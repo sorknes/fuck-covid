@@ -8,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import Normalize from "react-normalize";
 
 import { GlobalStyle } from "../global/GlobalStyle";
 
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Normalize />
       <GlobalStyle />
 
       <Header siteTitle={data.site.siteMetadata.title} />
