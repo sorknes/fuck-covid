@@ -7,6 +7,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 `;
 
 const SectionHeader = styled.header`

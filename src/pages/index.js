@@ -44,19 +44,38 @@ const IndexPage = () => {
             <CountUp
               start={0}
               end={infected && infected.cases}
-              delay={2}
+              delay={0}
               duration={5}
               separator="."
             />
           </h1>
         )}
 
-        <p>People infected globaly</p>
+        <p>People infected</p>
+
+        <Link to="/#deaths">next</Link>
       </Section>
 
       <Section id="deaths">
-        <h1>{infected && infected.deaths}</h1>
+        {infected && infected.cases && (
+          <h1>
+            <CountUp
+              start={0}
+              end={infected && infected.deaths}
+              delay={0}
+              duration={5}
+              separator="."
+            />
+          </h1>
+        )}
+
         <p>Deaths</p>
+
+        <Link to="/#fuckCovid">next</Link>
+      </Section>
+
+      <Section id="fuckCovid">
+        <p>Give Covid a fuck off</p>
       </Section>
 
       <div style={{ height: "2000px" }}></div>
