@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
-import { Link } from "gatsby";
 
 import Layout from "../components/Layout/Layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
 
 import Section from "../components/Section/Section";
+import ButtonLink from "../components/ButtonLink/ButtonLink";
 
 const IndexPage = () => {
-  // const COVID_API_URL = "https://api.covid19api.com/summary";
   const COVID_API_URL = "https://coronavirus-19-api.herokuapp.com/all";
 
   const [infected, setInfected] = useState([]);
@@ -53,17 +51,17 @@ const IndexPage = () => {
 
         <p>People infected</p>
 
-        <Link to="/#deaths">next</Link>
+        <ButtonLink to="/#deaths">Deaths</ButtonLink>
       </Section>
 
       <Section id="deaths">
         {infected && infected.cases && (
           <h1>
             <CountUp
-              start={0}
+              start={infected && infected.deaths}
               end={infected && infected.deaths}
               delay={0}
-              duration={5}
+              duration={0}
               separator="."
             />
           </h1>
@@ -71,21 +69,18 @@ const IndexPage = () => {
 
         <p>Deaths</p>
 
-        <Link to="/#fuckCovid">next</Link>
+        <ButtonLink to="/#fuckCovid">Fuck Covid</ButtonLink>
       </Section>
 
       <Section id="fuckCovid">
-        <p>Give Covid a fuck off</p>
+        <p>Give Covid-19 a fuck off & stay safe</p>
+
+        <ButtonLink to="/#thanks">Site info</ButtonLink>
       </Section>
 
-      <div style={{ height: "2000px" }}></div>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+      <Section id="thanks">
+        <p>API resource etc...</p>
+      </Section>
     </Layout>
   );
 };

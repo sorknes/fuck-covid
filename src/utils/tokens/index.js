@@ -15,8 +15,8 @@ import { colorNeutral } from "./color-neutral";
 // import { fontWeight } from "./font-weight";
 // import { lineHeight } from "./line-height";
 // import { spacing } from "./spacing";
-// import { transitionDuration } from "./transition-duration";
-// import { transitionTiming } from "./transition-timing";
+import { transitionDuration } from "./transition-duration";
+import { transitionTiming } from "./transition-timing";
 // import { zIndex } from "./z-index";
 
 export const token = {
@@ -31,10 +31,10 @@ export const token = {
   },
   // containerWidth,
   // space: spacing,
-  // transition: {
-  //   duration: transitionDuration,
-  //   timing: transitionTiming,
-  // },
+  transition: {
+    duration: transitionDuration,
+    timing: transitionTiming,
+  },
   // typography: {
   //   family: fontFamily,
   //   lineHeight: lineHeight,
