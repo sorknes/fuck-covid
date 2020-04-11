@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
-const Infected = styled.article`
+const Section = styled.section`
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  flex-direction: column;
+`;
+
+const SectionHeader = styled.header`
+  width: 100%;
+  text-align: center;
 `;
 
 export const Styled = {
-  Infected,
+  Section,
+  SectionHeader,
 };
