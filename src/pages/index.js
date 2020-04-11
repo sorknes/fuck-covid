@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CountUp from "react-countup";
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout/Layout";
@@ -8,7 +9,8 @@ import SEO from "../components/seo";
 import Section from "../components/Section/Section";
 
 const IndexPage = () => {
-  const COVID_API_URL = "https://api.covid19api.com/summary";
+  // const COVID_API_URL = "https://api.covid19api.com/summary";
+  const COVID_API_URL = "https://coronavirus-19-api.herokuapp.com/all";
 
   const [infected, setInfected] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -35,14 +37,25 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       <Section id="infected">
-        {isLoading && <p>Getting data...</p>}
+        {isLoading && <h1>0</h1>}
 
-        <h1>{infected && infected.Global && infected.Global.TotalConfirmed}</h1>
+        {infected && infected.cases && (
+          <h1>
+            <CountUp
+              start={0}
+              end={infected && infected.cases}
+              delay={2}
+              duration={5}
+              separator="."
+            />
+          </h1>
+        )}
+
         <p>People infected globaly</p>
       </Section>
 
       <Section id="deaths">
-        <h1>{infected && infected.Global && infected.Global.TotalDeaths}</h1>
+        <h1>{infected && infected.deaths}</h1>
         <p>Deaths</p>
       </Section>
 
