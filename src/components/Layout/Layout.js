@@ -39,11 +39,7 @@ const Layout = ({ children }) => {
           maxWidth: "100%",
         }}>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer>© {new Date().getFullYear()}</footer>
       </div>
     </>
   );

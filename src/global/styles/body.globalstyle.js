@@ -15,7 +15,8 @@ export const GlobalBody = css`
     padding: 0;
     margin: 0;
     color: ${token.color.neutral.TINT_90};
-    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    /* font-family: "Playfair Display", "Times New Roman", Times, serif; */
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     background-color: ${token.color.neutral.TINT_0};
     background-image: url(${background});
     background-repeat: no-repeat;
