@@ -5,7 +5,7 @@
 //
 
 html {
-  color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_20);
+  color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_95);
 
   @include font-family(FONT_FAMILY_1);
   @include font-weight(FONT_WEIGHT_3);

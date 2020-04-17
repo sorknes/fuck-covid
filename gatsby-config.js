@@ -33,7 +33,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["PT Sans:400,700:latin,greek"],
+          families: ["Libre Franklin:ital,wght@0,300;0,400;0,800;1"],
         },
       },
     },
