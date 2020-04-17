@@ -1,0 +1,14 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Contains styling from external vendors
+//
+// Resources:
+// 01. https://csstools.github.io/sanitize.css/
+// 02. https://github.com/sass-mq/sass-mq
+// ===============================================================================
+//
+
+// Import vendor from node_modules
+// -------------------------------------------------------------------------------
+@import "~sanitize.css";
+@import "~sass-mq";
