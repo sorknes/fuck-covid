@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Add border to element
+// ===============================================================================
+//
+
+@mixin border(
+  $border-size: null,
+  $border-pattern: null,
+  $border-color: black,
+  $border-position: all,
+  $border-clear: none
+) {
+  @if $border-position == all {
+    border: map-get($BORDER_WIDTH, $border-size) $border-pattern $border-color;
+  } @else {
+    border-#{$border-position}: map-get($BORDER_WIDTH, $border-size)
+      $border-pattern
+      $border-color;
+  }
+  @if $border-clear == none {
+    $border-position: all;
+  } @else {
+    border-#{$border-clear}: none;
+  }
+}

@@ -1,0 +1,23 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Container mixin
+// ===============================================================================
+//
+
+@mixin container() {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+  max-width: map-get($BREAKPOINT, BREAKPOINT_5);
+  width: 100%;
+  box-sizing: content-box;
+
+  @include mq($from: md) {
+    width: calc(100% - 2rem);
+  }
+}
+
+@mixin container-fluid() {
+  max-width: 100% !important;
+  width: 100% !important;
+}

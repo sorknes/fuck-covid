@@ -1,0 +1,10 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Theorically bulletproof CSS class for visually hide anything and
+// keep it accessible to ATs.
+// ===============================================================================
+//
+
+.sr-only {
+  @include sr-only;
+}

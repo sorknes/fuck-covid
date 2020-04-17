@@ -1,0 +1,23 @@
+// -------------------------------------------------------------------------------
+//
+// Description: SCSS classes/mixins for responsive margins and padding.
+//
+// Source: https://github.com/digitaledgeit/sass-spacing
+// ===============================================================================
+//
+
+$spacing-sizes: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.25rem * 2,
+  3: 0.25rem * 3,
+  4: 0.25rem * 4,
+  5: 0.25rem * 5,
+  6: 0.25rem * 6,
+  7: 0.25rem * 7,
+  8: 0.25rem * 8,
+  9: 0.25rem * 9,
+  10: 0.25rem * 10,
+) !default;
+
+$spacing-important: false !default;

@@ -1,0 +1,32 @@
+// -------------------------------------------------------------------------------
+//
+// Description: The idea behind this mixin is that no defaults are declared in the
+// arguments so that we are “forced” in a friendly way to declare all 4 states of
+// our links.
+//
+// The :hover and :focus pseudo-classes are usually declared together. Feel free
+// to separate them if you want to do so.
+// ===============================================================================
+//
+
+@mixin text-underline(
+  $color: $buf-color-text-link,
+  $color-hover: $buf-color-text-link-hover,
+  $color-visited: $buf-color-text-link-visited
+) {
+  & {
+    color: $color;
+    text-decoration: none;
+    border-bottom: 1px solid $color;
+
+    &:visited {
+      color: $color-visited;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-hover;
+      border-bottom-color: transparent;
+    }
+  }
+}

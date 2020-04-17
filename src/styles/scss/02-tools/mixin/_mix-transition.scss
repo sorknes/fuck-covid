@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Transition with type and duration
+// ===============================================================================
+//
+
+@mixin transition(
+  $transition-property,
+  $transition-duration,
+  $transition-timing-function
+) {
+  transition-property: $transition-property;
+  transition-duration: map-get($DURATION, $transition-duration);
+  transition-timing-function: ease-in-out;
+}

@@ -1,0 +1,11 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Align element to center, and center align text
+// ===============================================================================
+//
+
+@mixin center() {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

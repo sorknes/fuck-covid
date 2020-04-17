@@ -1,0 +1,17 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Use in conjunction with .sr-only to only display content when it's
+// focused.
+// ===============================================================================
+//
+
+@mixin sr-only-focusable() {
+  width: auto !important;
+  height: auto !important;
+  margin: auto !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+}

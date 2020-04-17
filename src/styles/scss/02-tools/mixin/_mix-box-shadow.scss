@@ -1,0 +1,9 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Box shadow
+// ===============================================================================
+//
+
+@mixin box-shadow($shadow, $shadow-color: null) {
+  box-shadow: map-get($BOX_SHADOW, $shadow) $shadow-color;
+}

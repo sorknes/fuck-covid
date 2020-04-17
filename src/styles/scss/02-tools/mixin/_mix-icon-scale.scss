@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Sets width/height of icons. Matches $type-scale
+// ===============================================================================
+//
+
+@mixin icon-scale($scale) {
+  width: map-get($ICON_SCALE, $scale);
+  height: map-get($ICON_SCALE, $scale);
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}

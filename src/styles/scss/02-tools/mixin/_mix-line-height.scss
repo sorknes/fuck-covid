@@ -1,0 +1,13 @@
+// -------------------------------------------------------------------------------
+//
+// Description: This mixin takes a parameter for line-height (sass-map: $line-height).
+// It then uses the function map-fetch to reach deep key:value pairs within this map.
+//
+// Finally it outputs the correct pairing of font-size and line-height, using the
+// compass-mixin `line-height`.
+// ===============================================================================
+//
+
+@mixin line-height($line-height) {
+  line-height: map-get($LINE_HEIGHT, $line-height);
+}

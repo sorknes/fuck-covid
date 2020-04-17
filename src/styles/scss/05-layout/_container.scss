@@ -1,0 +1,70 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Container and container modifiers, width and aligment
+// ===============================================================================
+//
+
+// Container
+// -------------------------------------------------------------------------------
+.container,
+.container--fluid {
+  @include container;
+}
+
+.container--fluid {
+  @include container-fluid;
+}
+
+// Width
+// -------------------------------------------------------------------------------
+.container--xs {
+  max-width: map-get($BREAKPOINT, BREAKPOINT_1);
+
+  [class*='buf-col-'] {
+    padding: $gutter / 4;
+  }
+}
+
+.container--sm {
+  max-width: map-get($BREAKPOINT, BREAKPOINT_2);
+
+  [class*='buf-col-'] {
+    padding: $gutter / 3;
+  }
+}
+
+.container--md {
+  max-width: map-get($BREAKPOINT, BREAKPOINT_3);
+
+  [class*='buf-col-'] {
+    padding: $gutter / 2;
+  }
+}
+
+.container--lg {
+  max-width: map-get($BREAKPOINT, BREAKPOINT_4);
+
+  [class*='buf-col-'] {
+    padding: $gutter / 1;
+  }
+}
+
+.container--xl {
+  max-width: map-get($BREAKPOINT, BREAKPOINT_5);
+}
+
+// Align
+// -------------------------------------------------------------------------------
+.container--left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.container--center {
+  @include push-auto;
+}
+
+.container--right {
+  margin-right: 0;
+  margin-left: auto;
+}

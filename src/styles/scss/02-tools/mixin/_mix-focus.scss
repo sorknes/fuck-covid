@@ -1,0 +1,16 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Focus style
+// ===============================================================================
+//
+
+@mixin focus() {
+  outline: 0;
+  position: relative;
+  z-index: 1;
+
+  @include box-shadow(
+    BOX_SHADOW_2,
+    map-get($COLOR_BRAND_BLUE, COLOR_BRAND_BLUE_TINT_40)
+  );
+}

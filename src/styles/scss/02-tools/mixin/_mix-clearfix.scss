@@ -1,0 +1,16 @@
+// -------------------------------------------------------------------------------
+//
+// Description: This is a simpler version of the well known clearfix hack made by
+// Nicolas Gallagher. This version is simplified for more modern browsers
+//
+// Resource: http://cssmojo.com/latest_new_clearfix_so_far/
+// ===============================================================================
+//
+
+@mixin clearfix() {
+  &::after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+}

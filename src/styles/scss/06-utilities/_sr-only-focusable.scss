@@ -1,0 +1,13 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Theorically bulletproof CSS class for visually hide anything and
+// keep it accessible to ATs.
+//
+// Use in conjunction with .sr-only to only display content when it's focused.
+// ===============================================================================
+//
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  @include sr-only-focusable;
+}

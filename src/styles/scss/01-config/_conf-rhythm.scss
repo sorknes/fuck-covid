@@ -1,0 +1,17 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Vertical rhythm for dealing with typography
+//
+// Source:
+// http://compass-style.org/reference/compass/typography/vertical_rhythm/
+// ===============================================================================
+//
+
+$base-unit-number: 4;
+$base-unit: ($base-unit-number * 1px);
+
+$base-font-size: map-get($FONT_SIZE, FONT_SIZE_2);
+$base-line-height: $base-unit * 6;
+
+// Used by Sass-mq
+// $mq-base-font-size: $base-font-size;

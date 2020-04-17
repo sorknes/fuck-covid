@@ -1,0 +1,87 @@
+// -------------------------------------------------------------------------------
+//
+// Description: CSS classes/mixins for responsive margins and padding.
+//
+// Resource: https://github.com/digitaledgeit/sass-spacing
+// ===============================================================================
+//
+
+@each $mq, $units in $mq-breakpoints {
+  @include mq($mq) {
+    $size: 'auto';
+
+    .mx\:#{$size}\@#{$mq} {
+      @include mx($size);
+    }
+
+    .ml\:#{$size}\@#{$mq} {
+      @include ml($size);
+    }
+
+    .mr\:#{$size}\@#{$mq} {
+      @include mr($size);
+    }
+
+    @each $size, $units in $spacing-sizes {
+      // Margin
+      // -------------------------------------------------------------------------------
+      .m\:#{$size}\@#{$mq} {
+        @include m($size);
+      }
+
+      .mx\:#{$size}\@#{$mq} {
+        @include mx($size);
+      }
+
+      .my\:#{$size}\@#{$mq} {
+        @include my($size);
+      }
+
+      .ml\:#{$size}\@#{$mq} {
+        @include ml($size);
+      }
+
+      .mt\:#{$size}\@#{$mq} {
+        @include mt($size);
+      }
+
+      .mr\:#{$size}\@#{$mq} {
+        @include mr($size);
+      }
+
+      .mb\:#{$size}\@#{$mq} {
+        @include mb($size);
+      }
+
+      // Padding
+      // -------------------------------------------------------------------------------
+      .p\:#{$size}\@#{$mq} {
+        @include p($size);
+      }
+
+      .px\:#{$size}\@#{$mq} {
+        @include px($size);
+      }
+
+      .py\:#{$size}\@#{$mq} {
+        @include py($size);
+      }
+
+      .pl\:#{$size}\@#{$mq} {
+        @include pl($size);
+      }
+
+      .pt\:#{$size}\@#{$mq} {
+        @include pt($size);
+      }
+
+      .pr\:#{$size}\@#{$mq} {
+        @include pr($size);
+      }
+
+      .pb\:#{$size}\@#{$mq} {
+        @include pb($size);
+      }
+    }
+  }
+}

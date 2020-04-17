@@ -17,29 +17,29 @@
 // -------------------------------------------------------------------------------
 @import "./00-vendor/all-vendors";
 
-// // 01. Contains global styles, such as breakpoints, fonts, colors, etc
-// // -------------------------------------------------------------------------------
-// @import './01-config/all-configs';
+// 01. Contains global styles, such as breakpoints, fonts, colors, etc
+// -------------------------------------------------------------------------------
+@import "./01-config/all-configs";
 
-// // 02. Contains global mixins, functions, helper selectors, etc.
-// // -------------------------------------------------------------------------------
-// @import './02-tools/all-tools';
+// 02. Contains global mixins, functions, helper selectors, etc.
+// -------------------------------------------------------------------------------
+@import "./02-tools/all-tools";
 
-// // 03. Contains global styles, such as normalize, color, typography, spacing, iconography
-// // -------------------------------------------------------------------------------
-// @import './03-foundations/all-foundations';
+// 03. Contains global styles, such as normalize, color, typography, spacing, iconography
+// -------------------------------------------------------------------------------
+@import "./03-foundations/all-foundations";
 
-// // 04. Contains each self-contained component in its own .scss partial
-// // -------------------------------------------------------------------------------
-// @import './04-components/all-components';
+// 04. Contains each self-contained component in its own .scss partial
+// -------------------------------------------------------------------------------
+// Please read the README file
 
-// // 05. Contains all you need to manage a flexbox grid
-// // -------------------------------------------------------------------------------
-// @import './05-layout/all-layout';
+// 05. Contains all you need to manage a flexbox grid
+// -------------------------------------------------------------------------------
+@import "./05-layout/all-layout";
 
-// // 06. Contains predefined mixins, such as placeholder, border, border-radius etc
-// // -------------------------------------------------------------------------------
-// @import './06-utilities/all-utilities';
+// 06. Contains predefined mixins, such as placeholder, border, border-radius etc
+// -------------------------------------------------------------------------------
+@import "./06-utilities/all-utilities";
 
 // // 07. Contains print specific styling
 // // -------------------------------------------------------------------------------

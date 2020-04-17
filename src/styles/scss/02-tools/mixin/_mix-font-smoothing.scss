@@ -1,0 +1,10 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Improving font rendering with CSS
+// ===============================================================================
+//
+
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

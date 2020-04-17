@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Typography
+// ===============================================================================
+//
+
+// Heading
+// -------------------------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
+
+  @include my(0);
+  @include font-weight(FONT_WEIGHT_5);
+  @include font-family(FONT_FAMILY_2);
+}
+
+h1,
+#{$prefix}-h1 {
+  @include type-scale(TEXT_PRESET_7);
+
+  &#{$prefix}-h1--jumbo {
+    margin-inline-start: -2px;
+    font-size: map-get($FONT_SIZE, FONT_SIZE_7) * 2.25;
+    letter-spacing: -4px;
+  }
+}
+
+h2,
+#{$prefix}-h2 {
+  margin-inline-start: -2px;
+
+  @include type-scale(TEXT_PRESET_6);
+}
+
+h3,
+#{$prefix}-h3 {
+  @include type-scale(TEXT_PRESET_5);
+}
+
+h4,
+#{$prefix}-h4 {
+  @include type-scale(TEXT_PRESET_4);
+}
+
+h5,
+#{$prefix}-h5 {
+  @include type-scale(TEXT_PRESET_3);
+}
+
+h6,
+#{$prefix}-h6 {
+  text-transform: uppercase;
+
+  @include type-scale(TEXT_PRESET_2);
+}
+
+// Paragraph
+// -------------------------------------------------------------------------------
+p,
+#{$prefix}-paragraph {
+  @include mb(6);
+}
+
+// Small
+// -------------------------------------------------------------------------------
+small,
+#{$prefix}-small {
+  @include type-scale(TEXT_PRESET_1);
+}
+
+// List
+// -------------------------------------------------------------------------------
+
+// Blockquotes
+// -------------------------------------------------------------------------------
+
+// Figcaption
+// -------------------------------------------------------------------------------
+figcaption {
+  margin-inline-start: -1px;
+}

@@ -1,0 +1,25 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Input Placeholder
+//
+// The @content directive, allows us to pass a content block into a mixin
+// ===============================================================================
+//
+
+@mixin input-placeholder() {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}

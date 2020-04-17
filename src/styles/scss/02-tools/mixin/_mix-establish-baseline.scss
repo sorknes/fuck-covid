@@ -1,0 +1,13 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Adjust font and line-height values
+// ===============================================================================
+//
+
+@mixin establish-baseline() {
+  font-size: map-get($FONT_SIZE, FONT_SIZE_2);
+  line-height: map-get($LINE_HEIGHT, LINE_HEIGHT_2);
+  text-size-adjust: 100%;
+}
+
+//FIXME: Move map-get to rhythm.scss. Use $base-font-size & $base-line-height here

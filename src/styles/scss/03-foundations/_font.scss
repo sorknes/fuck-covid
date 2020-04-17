@@ -1,0 +1,17 @@
+// -------------------------------------------------------------------------------
+//
+// Description: Sett default font values
+// ===============================================================================
+//
+
+html {
+  color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_20);
+
+  @include font-family(FONT_FAMILY_1);
+  @include font-weight(FONT_WEIGHT_3);
+  @include establish-baseline();
+
+  * {
+    @include font-smoothing();
+  }
+}
