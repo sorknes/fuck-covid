@@ -1,0 +1,31 @@
+#{$prefix}-header {
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @include py(8);
+  @include px(10);
+}
+
+#{$prefix}-header__logo {
+  position: absolute;
+  top: rem(24px);
+
+  &::before {
+    width: calc(100% + 32px);
+    height: 2px;
+    margin-top: -1px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    background-color: white;
+    z-index: -1;
+  }
+}
