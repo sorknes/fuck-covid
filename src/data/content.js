@@ -6,8 +6,9 @@ export const content = [
     background: "yellow",
     width: "20%",
     //height: '2vh',
-    left: "10%",
-    top: "6vh",
+    left: "50%",
+    top: "15vh",
+    marginLeft: "-10%",
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ export const content = [
     background: "yellow",
     width: "20%",
     //height: '2vh',
-    left: "10%",
-    top: "calc(100% + 6vh)",
+    left: "50%",
+    top: "calc(100% + 15vh)",
+    marginLeft: "-10%",
   },
 ];

@@ -22,8 +22,8 @@ const Section = ({ description, title, ...style }) => {
         className="overlay"
         style={{ ...style, y }}
         animate={{
-          width: ["0%", "50%"],
-          opacity: [0, 0.9],
+          width: ["0%", "20%"],
+          opacity: [0, 1],
           transition: {
             delay: 0.5,
           },
