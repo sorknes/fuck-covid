@@ -1,0 +1,24 @@
+#{$prefix}-grid-lines {
+  width: 1px;
+  position: fixed;
+  top: 0;
+  background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_90);
+  z-index: -1;
+
+  &::before,
+  &::after {
+    width: 1px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_90);
+  }
+
+  &::before {
+    left: -240px;
+  }
+
+  &::after {
+    right: -240px;
+  }
+}

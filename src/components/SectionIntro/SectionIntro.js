@@ -25,6 +25,12 @@ const SectionIntro = () => {
     <Section id="intro">
       <div className="fc-section__content" ref={ref}>
         <motion.div
+          className="fc-grid-lines"
+          animate={{ height: ["0vh", "100vh"] }}
+          transition={{
+            delay: 1,
+          }}></motion.div>
+        <motion.div
           className="overlay-yellow"
           style={{ y: y1 }}
           animate={{
