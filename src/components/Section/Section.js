@@ -7,7 +7,11 @@ const Section = ({ description, title, ...style }) => {
   const ref = useRef(null);
   const { scrollY } = useViewportScroll();
 
-  const y = useTransform(scrollY, [elementTop, elementTop + 1], [0, -1], {
+  const y1 = useTransform(scrollY, [elementTop, elementTop + 1], [0, -1], {
+    clamp: false,
+  });
+
+  const y2 = useTransform(scrollY, [elementTop, elementTop + 5], [0, -1], {
     clamp: false,
   });
 
@@ -17,27 +21,41 @@ const Section = ({ description, title, ...style }) => {
   }, [ref]);
 
   return (
-    <div ref={ref}>
-      <motion.div
-        className="overlay"
-        style={{ ...style, y }}
-        animate={{
-          width: ["0%", "20%"],
-          opacity: [0, 1],
-          transition: {
-            delay: 0.5,
-          },
-        }}
-      />
-      <motion.div
-        animate={{
-          y: [200, 0],
-          opacity: [0, 1],
+    <>
+      <div
+        ref={ref}
+        style={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
         }}>
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </motion.div>
-    </div>
+        <motion.div
+          className="overlay-yellow"
+          style={{ y: y1 }}
+          animate={{
+            width: ["0%", "37.5%"],
+            opacity: [0, 1],
+          }}
+        />
+        <motion.div
+          animate={{
+            y: [-400, 0],
+            // opacity: [0, 1],
+          }}>
+          <h2>Fuck</h2>
+        </motion.div>
+        <motion.div
+          animate={{
+            y: [400, 0],
+            opacity: [0, 1],
+          }}>
+          <motion.h2 style={{ y: y2, marginLeft: "3vw" }}>Covid</motion.h2>
+        </motion.div>
+      </div>
+    </>
   );
 };
 
