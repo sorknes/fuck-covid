@@ -1,0 +1,29 @@
+#{$prefix}-scroll-down {
+  width: 1px;
+  height: 160px;
+  position: absolute;
+  left: 4vw;
+  bottom: 4vw;
+  background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
+
+  &::before,
+  &::after {
+    width: 1px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
+  }
+
+  &::before {
+    bottom: -6px;
+    left: -14px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    bottom: -6px;
+    right: -14px;
+    transform: rotate(45deg);
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import PropTypes from "prop-types";
 
+import ScrollDown from "../ScrollDown/ScrollDown";
 import Section from "../Section/Section";
 
 const SectionStats = props => {
@@ -22,6 +23,8 @@ const SectionStats = props => {
 
   return (
     <Section id={id}>
+      <ScrollDown />
+
       <div className="fc-section__container" ref={ref}>
         <motion.div
           className="fc-overlay"

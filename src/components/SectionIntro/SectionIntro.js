@@ -1,6 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
+import ScrollDown from "../ScrollDown/ScrollDown";
 import Section from "../Section/Section";
 import SectionContent from "../SectionContent/SectionContent";
 
@@ -33,6 +34,8 @@ const SectionIntro = () => {
 
   return (
     <Section id="intro">
+      <ScrollDown />
+
       <div className="fc-section__container" ref={ref}>
         <motion.div
           className="fc-grid-lines"
