@@ -26,11 +26,14 @@
   display: inline-block;
 }
 
-.overlay-yellow {
+#{$prefix}-overlay {
   height: 7vw;
   position: absolute;
-  top: 50%;
-  left: 10%;
   background-color: rgba(253, 250, 102, 1);
   z-index: 1;
+}
+
+#{$prefix}-overlay--intro {
+  top: 50%;
+  left: 10%;
 }

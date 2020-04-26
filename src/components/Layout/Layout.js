@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 3000);
-  }, []); // here
+  }, []);
 
   return (
     <>
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <main>{children}</main>
+          <main className="main">{children}</main>
           {/* <footer>
         © {new Date().getFullYear()}, Built with
         {` `}

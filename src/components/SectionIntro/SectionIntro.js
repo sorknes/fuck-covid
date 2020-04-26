@@ -17,6 +17,10 @@ const SectionIntro = () => {
     clamp: false,
   });
 
+  const y3 = useTransform(scrollY, [elementTop, elementTop + 2], [0, -1], {
+    clamp: false,
+  });
+
   const opacity = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -38,10 +42,10 @@ const SectionIntro = () => {
           }}
         />
         <motion.div
-          className="overlay-yellow"
+          className="fc-overlay fc-overlay--intro"
           style={{ y: y1 }}
           animate={{
-            width: ["0%", "37.5%"],
+            width: ["0%", "40%"],
             opacity: [0, 1],
           }}
         />
@@ -71,6 +75,7 @@ const SectionIntro = () => {
         </motion.h1>
         <SectionContent>
           <motion.div
+            style={{ y: y3 }}
             initial="hidden"
             animate="visible"
             variants={opacity}
@@ -81,7 +86,8 @@ const SectionIntro = () => {
               All over the world millions of people are affected by the Covid-19
               virus.
               <br />
-              And sometimes, you just want to say fuck you Covid!
+              And sometimes, you just want to say;{" "}
+              <strong>Fuck you Covid!</strong>
             </p>
           </motion.div>
         </SectionContent>

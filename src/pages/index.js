@@ -39,8 +39,20 @@ const IndexPage = () => {
         <h1 className="fc-section__title">Fetching data</h1>
       ) : (
         <>
-          <SectionStats id="infected" stats={stats && stats.cases} />
-          <SectionStats id="deaths" stats={stats && stats.deaths} />
+          <SectionStats
+            id="infected"
+            top="50%"
+            left="calc(50% + 1px)"
+            width="40%"
+            stats={stats && parseFloat(stats.cases).toLocaleString()}
+          />
+          <SectionStats
+            id="deaths"
+            top="50%"
+            left="10%"
+            width="40%"
+            stats={stats && parseFloat(stats.deaths).toLocaleString()}
+          />
         </>
       )}
 
