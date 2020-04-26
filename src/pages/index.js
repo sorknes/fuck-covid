@@ -12,19 +12,19 @@ const IndexPage = () => {
   const COVID_API_URL = "https://coronavirus-19-api.herokuapp.com/all";
 
   const [stats, setInStats] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   function fetchData() {
     fetch(COVID_API_URL)
       .then(jsonResponse => jsonResponse.json())
       .then(response => {
-        // setIsLoading(false);
+        setIsLoading(false);
         setInStats(response);
+      })
+      .catch(e => {
+        console.log("error", e);
+        setIsLoading(false);
       });
-    // .catch(e => {
-    //   console.log("error", e);
-    //   setIsLoading(false);
-    // });
   }
 
   useEffect(() => {
@@ -34,14 +34,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SectionIntro />
-      <SectionStats id="infected" stats={stats && stats.cases} />
-      {/* {isLoading ? (
-          <h1 className="fc-section__title">0</h1>
-        ) : (
-          <h1 className="fc-section__title">{stats && stats.cases}</h1>
-        )} */}
 
-      <SectionStats id="infected" stats={stats && stats.deaths} />
+      {isLoading ? (
+        <h1 className="fc-section__title">Fetching data</h1>
+      ) : (
+        <>
+          <SectionStats id="infected" stats={stats && stats.cases} />
+          <SectionStats id="deaths" stats={stats && stats.deaths} />
+        </>
+      )}
 
       {/* <SEO title="Home" />
     <h1>Hi people</h1>

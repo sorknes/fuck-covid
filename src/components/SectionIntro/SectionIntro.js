@@ -2,6 +2,7 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import Section from "../Section/Section";
+import SectionContent from "../SectionContent/SectionContent";
 
 const SectionIntro = () => {
   const [elementTop, setElementTop] = useState(0);
@@ -16,6 +17,11 @@ const SectionIntro = () => {
     clamp: false,
   });
 
+  const opacity = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   useLayoutEffect(() => {
     const element = ref.current;
     setElementTop(element.offsetTop);
@@ -23,13 +29,14 @@ const SectionIntro = () => {
 
   return (
     <Section id="intro">
-      <div className="fc-section__content" ref={ref}>
+      <div className="fc-section__container" ref={ref}>
         <motion.div
           className="fc-grid-lines"
           animate={{ height: ["0vh", "100vh"] }}
           transition={{
             delay: 1,
-          }}></motion.div>
+          }}
+        />
         <motion.div
           className="overlay-yellow"
           style={{ y: y1 }}
@@ -38,7 +45,11 @@ const SectionIntro = () => {
             opacity: [0, 1],
           }}
         />
-        <h1 className="fc-section__title">
+        <motion.h1
+          className="fc-section__title"
+          initial="hidden"
+          animate="visible"
+          variants={opacity}>
           <motion.span
             className="fc-section__block"
             animate={{
@@ -50,7 +61,6 @@ const SectionIntro = () => {
             className="fc-section__block"
             animate={{
               y: [400, 0],
-              opacity: [0, 1],
             }}>
             <motion.span
               className="fc-section__block"
@@ -58,7 +68,23 @@ const SectionIntro = () => {
               Covid
             </motion.span>
           </motion.span>
-        </h1>
+        </motion.h1>
+        <SectionContent>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={opacity}
+            transition={{
+              delay: 0.5,
+            }}>
+            <p>
+              All over the world millions of people are affected by the Covid-19
+              virus.
+              <br />
+              And sometimes, you just want to say fuck you Covid!
+            </p>
+          </motion.div>
+        </SectionContent>
       </div>
     </Section>
   );

@@ -3,12 +3,13 @@
   height: 100vh;
 }
 
-#{$prefix}-section__content {
+#{$prefix}-section__container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .overlay-yellow {
-  height: 12vh;
+  height: 7vw;
   position: absolute;
   top: 50%;
   left: 10%;

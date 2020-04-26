@@ -64,6 +64,7 @@ h6,
 p,
 #{$prefix}-paragraph {
   @include mb(6);
+  @include type-scale(TEXT_PRESET_3);
 }
 
 // Small

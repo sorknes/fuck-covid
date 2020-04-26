@@ -8,7 +8,7 @@ const SectionStats = props => {
 
   return (
     <Section id={id}>
-      <div className="fc-section__content">
+      <div className="fc-section__container">
         <h1 className="fc-section__title">{stats}</h1>
       </div>
     </Section>
