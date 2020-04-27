@@ -34,9 +34,11 @@ const SectionIntro = () => {
 
   return (
     <Section id="intro">
-      <ScrollDown />
-
       <div className="fc-section__container" ref={ref}>
+        <motion.div animate={{ bottom: ["-10vw", "4vw"], left: "4vw" }}>
+          <ScrollDown />
+        </motion.div>
+
         <motion.div
           className="fc-grid-lines"
           animate={{ height: ["0vh", "100vh"] }}
