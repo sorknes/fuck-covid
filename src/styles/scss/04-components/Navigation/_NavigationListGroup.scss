@@ -1,39 +1,78 @@
 #{$prefix}-nav__list-group {
-  position: relative;
-
-  &::before,
-  &::after {
-    width: 1px;
-    height: 25vh;
-    content: "";
-    position: absolute;
-    background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_95);
-  }
-
-  &::before {
-    top: calc(-25vh - 12px);
-  }
-
-  &::after {
-    bottom: calc(-25vh - 12px);
-  }
+  @include py(4);
 }
 
-#{$prefix}-nav__list-group-item {
-  position: relative;
+#{$prefix}-nav__list-item {
+  height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: rem(40px);
-
-    &::after {
-      width: 1px;
-      height: 24px;
-      content: "";
-      position: absolute;
-      bottom: rem(-32px);
-      background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_95);
-    }
+    @include mb(8);
   }
 }
+
+#{$prefix}-nav__list-link {
+  color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_50);
+  text-decoration: none;
+  position: relative;
+
+  @include type-scale(TEXT_PRESET_1);
+  @include transition(all, DURATION_3, ease-in-out);
+
+  &:hover,
+  &:focus {
+    color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
+  }
+}
+
+#{$prefix}-nav__list-link--current {
+  #{$prefix}-nav__list-link {
+    color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
+
+    @include font-weight(FONT_WEIGHT_4);
+    @include type-scale(TEXT_PRESET_2);
+    @include transition(all, DURATION_3, ease-in-out);
+  }
+}
+
+// #{$prefix}-nav__list-group {
+//   position: relative;
+
+//   &::before,
+//   &::after {
+//     width: 1px;
+//     height: 25vh;
+//     content: "";
+//     position: absolute;
+//     background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_95);
+//   }
+
+//   &::before {
+//     top: calc(-25vh - 12px);
+//   }
+
+//   &::after {
+//     bottom: calc(-25vh - 12px);
+//   }
+// }
+
+// #{$prefix}-nav__list-group-item {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+
+//   &:not(:last-child) {
+//     margin-bottom: rem(40px);
+
+//     &::after {
+//       width: 1px;
+//       height: 24px;
+//       content: "";
+//       position: absolute;
+//       bottom: rem(-32px);
+//       background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_95);
+//     }
+//   }
+// }

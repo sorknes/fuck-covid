@@ -3,7 +3,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import ScrollDown from "../ScrollDown/ScrollDown";
 import Section from "../Section/Section";
-import SectionContent from "../SectionContent/SectionContent";
+// import SectionContent from "../SectionContent/SectionContent";
 
 const SectionIntro = () => {
   const [elementTop, setElementTop] = useState(0);
@@ -18,9 +18,9 @@ const SectionIntro = () => {
     clamp: false,
   });
 
-  const y3 = useTransform(scrollY, [elementTop, elementTop + 2], [0, -1], {
-    clamp: false,
-  });
+  // const y3 = useTransform(scrollY, [elementTop, elementTop + 2], [0, -1], {
+  //   clamp: false,
+  // });
 
   const opacity = {
     hidden: { opacity: 0 },
@@ -35,7 +35,13 @@ const SectionIntro = () => {
   return (
     <Section id="intro">
       <div className="fc-section__container" ref={ref}>
-        <motion.div animate={{ bottom: ["-10vw", "4vw"], left: "4vw" }}>
+        <motion.div
+          initial={{ y: "0vh", x: "-46vw" }}
+          animate={{ y: "41.5vh", opacity: [0, 1] }}
+          transition={{
+            delay: 2.5,
+            duration: 1,
+          }}>
           <ScrollDown />
         </motion.div>
 
@@ -54,6 +60,14 @@ const SectionIntro = () => {
             opacity: [0, 1],
           }}
         />
+        {/* <motion.div
+          className="fc-virus"
+          style={{ y: y3 }}
+          // animate={{
+          //   width: ["0%", "40%"],
+          //   opacity: [0, 1],
+          // }}
+        /> */}
         <motion.h1
           className="fc-section__title"
           initial="hidden"
@@ -78,7 +92,8 @@ const SectionIntro = () => {
             </motion.span>
           </motion.span>
         </motion.h1>
-        <SectionContent>
+
+        {/* <SectionContent>
           <motion.div
             style={{ y: y3 }}
             initial="hidden"
@@ -95,7 +110,7 @@ const SectionIntro = () => {
               <strong>Fuck you Covid!</strong>
             </p>
           </motion.div>
-        </SectionContent>
+        </SectionContent> */}
       </div>
     </Section>
   );

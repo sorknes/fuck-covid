@@ -2,8 +2,6 @@
   width: 1px;
   height: 160px;
   position: absolute;
-  left: 4vw;
-  bottom: 4vw;
   background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_5);
 
   &::before,
@@ -26,4 +24,9 @@
     right: -14px;
     transform: rotate(45deg);
   }
+}
+
+#{$prefix}-scroll-down--position {
+  left: 4vw;
+  bottom: 6vh;
 }

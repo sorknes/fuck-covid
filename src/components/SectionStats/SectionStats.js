@@ -24,7 +24,7 @@ const SectionStats = props => {
   return (
     <Section id={id}>
       <div className="fc-section__container" ref={ref}>
-        <ScrollDown />
+        <ScrollDown secondary />
 
         <motion.div
           className="fc-overlay"

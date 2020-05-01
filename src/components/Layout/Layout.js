@@ -33,6 +33,13 @@ const Layout = ({ children }) => {
     }, 3000);
   }, []);
 
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]', {
+      speed: 1000,
+      easing: "easeInOutCubic",
+    });
+  }
+
   return (
     <>
       {isLoaded ? (

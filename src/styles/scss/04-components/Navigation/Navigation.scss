@@ -1,5 +1,24 @@
 #{$prefix}-nav {
   text-align: center;
+  position: absolute;
+  top: 12.5vh;
+
+  &::before,
+  &::after {
+    width: 1px;
+    content: "";
+    position: absolute;
+    background-color: map-get($COLOR_NEUTRAL, COLOR_NEUTRAL_TINT_90);
+  }
+
+  &::before {
+    height: 12.5vh;
+    top: -12.5vh;
+  }
+
+  &::after {
+    height: 50vh;
+  }
 }
 
 @import "./NavigationListGroup";
